@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Feasibility Infographic - Adgaon, Nashik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F0F0;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        h1, h2, h3 {
+            color: #2C2C2C;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .text-highlight {
+            color: #6A0DAD;
+        }
+        .bg-primary-accent {
+            background-color: #6A0DAD;
+        }
+        .text-secondary-accent {
+            color: #FF007F;
+        }
+        .text-tertiary-accent {
+            color: #008080;
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6A0DAD;
+        }
+        .section-icon {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .swot-item {
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .flow-box {
+            border: 2px solid #008080;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            background-color: #FFFFFF;
+            color: #2C2C2C;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: #008080;
+            margin: 0 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-2">New School in Govardhan, Nashik: A Feasibility Deep Dive</h1>
+            <p class="text-xl text-gray-700">Strategic Insights for Educational Investment</p>
+        </header>
+
+        <section class="card text-center">
+            <h2 class="text-3xl font-semibold mb-4">Executive Verdict</h2>
+            <p class="stat-value">Highly Viable</p>
+            <p class="text-lg mt-2">With Strategic Positioning, a new educational institution in Govardhan presents a compelling opportunity, tapping into robust demand and future growth.</p>
+        </section>
+
+        <section id="location" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">📍</span>Nashik & Govardhan: The Strategic Advantage</h2>
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-tertiary-accent">Population Growth Fueling Demand</h3>
+                    <p class="mb-4">Nashik's steady population increase, with the district projected to reach ~6.62 million by 2025 (1.5% annual growth since 2011) and Nashik city ~2.35 million (2.48% annual growth), creates a continually expanding student base. Govardhan village is strategically situated near Nashik city, benefiting from its proximity to industrial zones and major transportation corridors.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="populationGrowthChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center mt-2 text-gray-600">Illustrative population trends for Nashik District & City.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-tertiary-accent">Connectivity & Economic Vibrancy</h3>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center"><span class="section-icon text-lg mr-2">🛣️</span> Enhanced Mumbai-Agra Highway (NH-3) access and Samruddhi Mahamarg expressway.</li>
+                        <li class="flex items-center"><span class="section-icon text-lg mr-2">🚌</span> Robust Citilinc bus network; Adgaon as future e-bus hub.</li>
+                        <li class="flex items-center"><span class="section-icon text-lg mr-2">🚂</span> Improving rail connectivity (Odha & Nashik Road stations) and proposed high-speed rail links.</li>
+                        <li class="flex items-center"><span class="section-icon text-lg mr-2">🔺</span> Part of Maharashtra's "Golden Triangle Project" (Nashik, Mumbai, Pune).</li>
+                    </ul>
+                    <p>Nashik's diverse economy (IT, manufacturing, agriculture) signifies a growing professional class with high educational aspirations. However, utility reliability (water, electricity) requires investment in backup systems for operational resilience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketDemand" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">📊</span>Decoding Market Demand</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center p-4 border border-gray-200 rounded-lg">
+                    <p class="stat-value text-secondary-accent">29%</p>
+                    <p class="font-semibold">Youth Population (0-14 yrs)</p>
+                    <p class="text-sm">Of Nashik District's ~6.62M by 2025 (~1.8M individuals), forming a vast student pool.</p>
+                </div>
+                <div class="text-center p-4 border border-gray-200 rounded-lg">
+                     <p class="stat-value text-secondary-accent">89.85%</p>
+                     <p class="font-semibold">Literacy Rate (Nashik City)</p>
+                     <p class="text-sm">Indicates high societal value on education (District: 82.3%).</p>
+                </div>
+                <div class="text-center p-4 border border-gray-200 rounded-lg md:col-span-1 lg:col-span-1">
+                    <p class="stat-value text-secondary-accent">₹4.4L+</p>
+                    <p class="font-semibold">Avg. Annual Salary</p>
+                    <p class="text-sm">With top sectors offering up to ₹28L, indicating capacity for premium school fees.</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold mb-3 text-center text-tertiary-accent">Parental Aspirations & NEP 2020</h3>
+                <p class="text-center mb-4">Parents seek holistic development, world-class facilities, and future-ready skills. The National Education Policy (NEP) 2020, with its 5+3+3+4 structure and language mandates, presents a unique opportunity for new schools to be "NEP-ready" from inception.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-2">
+                    <div class="flow-box">Foundational (5 yrs)</div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-box">Preparatory (3 yrs)</div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-box">Middle (3 yrs)</div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-box">Secondary (4 yrs)</div>
+                </div>
+                <p class="text-sm text-center mt-2 text-gray-600">NEP 2020: New 5+3+3+4 Education Structure</p>
+            </div>
+        </section>
+
+        <section id="competition" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">⚔️</span>The Competitive Arena</h2>
+            <p class="text-center mb-4">Adgaon and Nashik host diverse schools. A new entrant must clearly differentiate.</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">School (Example)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Board</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Approx. Annual Fee (Nursery/Primary)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Highlight/Concern</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">Excel Public School, Adgaon</td>
+                            <td class="px-6 py-4 whitespace-nowrap">CBSE</td>
+                            <td class="px-6 py-4 whitespace-nowrap">~ ₹39,500 - ₹41,500</td>
+                            <td class="px-6 py-4 whitespace-normal">Good facilities; Some concerns for higher grades quality.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">Mount Litera Zee School, Adgaon</td>
+                            <td class="px-6 py-4 whitespace-nowrap">CBSE</td>
+                            <td class="px-6 py-4 whitespace-nowrap">N/A (Premium Expected)</td>
+                            <td class="px-6 py-4 whitespace-normal">Holistic development, tech integration.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">K.K.Wagh Universal School</td>
+                            <td class="px-6 py-4 whitespace-nowrap">CBSE, State</td>
+                            <td class="px-6 py-4 whitespace-nowrap">~ ₹46,000 - ₹55,000</td>
+                            <td class="px-6 py-4 whitespace-normal">Good reputation in Nashik.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">Orchid International School</td>
+                            <td class="px-6 py-4 whitespace-nowrap">ICSE</td>
+                            <td class="px-6 py-4 whitespace-nowrap">~ ₹265,000</td>
+                            <td class="px-6 py-4 whitespace-normal">Premium offering, strong academic focus.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold mb-3 text-center text-tertiary-accent">Fee Structure Landscape</h3>
+                <div class="chart-container h-72">
+                    <canvas id="feeStructureChart"></canvas>
+                </div>
+                <p class="text-sm text-center mt-2 text-gray-600">Illustrative fee ranges across different school segments.</p>
+            </div>
+        </section>
+
+        <section id="opportunities" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">💡</span>Untapped Opportunities & Market Gaps</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 border border-pink-500 rounded-lg bg-pink-50">
+                    <h3 class="text-lg font-semibold text-secondary-accent mb-1">💎 Premium, Holistic & Future-Ready Education</h3>
+                    <p class="text-sm">Demand for 21st-century skills, advanced tech (AI, coding), and entrepreneurship integration.</p>
+                </div>
+                <div class="p-4 border border-purple-500 rounded-lg bg-purple-50">
+                    <h3 class="text-lg font-semibold text-highlight mb-1">✅ NEP 2020 Aligned Curriculum</h3>
+                    <p class="text-sm">Significant advantage in designing a "NEP-ready" school from ground up (5+3+3+4 structure, language mandates).</p>
+                </div>
+                <div class="p-4 border border-teal-500 rounded-lg bg-teal-50">
+                    <h3 class="text-lg font-semibold text-tertiary-accent mb-1">🌱 Strong Foundations: Early Years Focus</h3>
+                    <p class="text-sm">Capitalize on large 0-14 demographic with initial focus on pre-primary/primary, ensuring quality before expansion.</p>
+                </div>
+                <div class="p-4 border border-yellow-500 rounded-lg bg-yellow-50">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-1">🛡️ Enhanced Safety & Wellness Focus</h3>
+                    <p class="text-sm">Proactive, state-of-the-art safety (CCTV, vetting) and wellness programs as a key differentiator.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="growthCatalysts" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">🚀</span>Future Growth Engines: Govardhan & Nashik's Development Pipeline</h2>
+            <p class="text-center mb-6">Govardhan village and the broader Nashik region are set for significant transformation driven by upcoming residential, commercial, industrial, and government infrastructure projects, all contributing to increased population and demand for quality education.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-tertiary-accent">Residential, Commercial & Industrial Expansion</h3>
+                    <p class="mb-4">Nashik is experiencing a surge in real estate with over 2,000 developments underway, particularly on the city's outskirts, including a growing trend towards gated communities. This growth, alongside new commercial and industrial developments, will directly swell the local population and economic activity. This includes both affordable and premium housing, ensuring a diverse influx of families.</p>
+                    <ul class="space-y-1 text-sm mt-2 mb-4">
+                        <li><span class="mr-2">🏡</span> **Shree Laxmi Apartment (Adgaon):** 22 units (2 & 3 BHK), possession Dec 2027.</li>
+                        <li><span class="mr-2">🏗️</span> **MHADA EWS & LIG Projects (Adgaon):** Completed 448 EWS units, with an upcoming tender for 77 LIG units.</li>
+                        <li><span class="mr-2">🏢</span> **Srk Magnitude (Commercial, Adgaon):** 39 units, completion Jan 2027, attracting businesses and employees.</li>
+                        <li><span class="mr-2">🏭</span> **CIPET Campus (Govardhan Village):** New Central Institute for Petrochemical Engineering Technology campus planned, aiming to train over 2,000 youths in the polymer sector, boosting educational and investment opportunities.</li>
+                        <li><span class="mr-2">🏘️</span> Various other residential projects across Nashik (e.g., Ishwar Pratik Grand, Suvik Aspire, The Grand By Parksyde) targeting mid-to-high income segments.</li>
+                        <li><span class="mr-2">🏘️</span> Growing trend towards gated community housing.</li>
+                    </ul>
+                    <div class="chart-container h-72">
+                        <canvas id="residentialUnitsChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center mt-2 text-gray-600">Illustrative new residential & commercial units in Adgaon (MHADA projects are completed/tendered; Shree Laxmi Apt & Srk Magnitude are upcoming).</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-tertiary-accent">Major Government & Infrastructure Push</h3>
+                    <p class="mb-1">A massive <strong class="text-highlight">₹20,000 Crore Investment</strong> is earmarked for Nashik's sustainable urban growth, largely driven by preparations for the Simhastha Kumbh Mela (2026-28) and long-term urban planning. Nashik is also part of the Maharashtra government's <strong class="text-highlight">"Golden Triangle Project"</strong>, aiming to boost development in Nashik, Mumbai, and Pune.</p>
+                    <ul class="space-y-1 text-sm mt-2">
+                        <li><span class="mr-2">💡</span> **Smart School Initiative:** ₹70 crore project transforming 100 municipal schools into smart schools, leading to increased enrollment and reduced dropout rates.</li>
+                        <li><span class="mr-2">📚</span> **Model School Development:** Nashik Zilla Parishad upgrading 521 schools to 'model' status, enhancing infrastructure and teaching quality across the district.</li>
+                        <li><span class="mr-2">🛣️</span> **Samruddhi Mahamarg Expressway & High-Speed Rail:** Enhancing connectivity and attracting investments.</li>
+                        <li><span class="mr-2">🎉</span> **Kumbh Mela Preparations:** Deployment of over 3,500 CCTV cameras, significant railway infrastructure upgrades (land acquisition at stations for new platforms, holding areas), and construction of new highways and Sewage Treatment Plants (STPs).</li>
+                        <li><span class="mr-2">🗺️</span> **Nashik Master Plan 2036:** Comprehensive urban planning initiative focusing on improving economic, social, and environmental factors, enhancing liveability, and strengthening Nashik as a manufacturing and agro-processing hub.</li>
+                    </ul>
+                    <p class="mt-3">These developments will attract more families and professionals, further boosting demand for quality education and enhancing the overall urban appeal of Govardhan and Nashik.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="swot" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">🔍</span>SWOT Analysis: Strategic Positioning</h2>
+            <div class="swot-grid">
+                <div class="swot-item bg-green-100 border border-green-400">
+                    <h3 class="font-bold text-green-700 mb-2 text-lg">Strengths</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Strong demographic demand (large youth cohort).</li>
+                        <li>Aspirational parents, high literacy.</li>
+                        <li>Strategic Govardhan location with improving connectivity.</li>
+                        <li>Opportunity for NEP 2020 native alignment.</li>
+                        <li>Lower cost of living in Nashik.</li>
+                    </ul>
+                </div>
+                <div class="swot-item bg-red-100 border border-red-400">
+                    <h3 class="font-bold text-red-700 mb-2 text-lg">Weaknesses</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Utility reliability concerns (power, water).</li>
+                        <li>Established competition requiring differentiation.</li>
+                        <li>Potentially lower average teacher salaries in Govardhan/Adgaon.</li>
+                        <li>Initial brand building challenge for new entrant.</li>
+                    </ul>
+                </div>
+                <div class="swot-item bg-blue-100 border border-blue-400">
+                    <h3 class="font-bold text-blue-700 mb-2 text-lg">Opportunities</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Gap for premium, holistic, tech-integrated education.</li>
+                        <li>Influx from upcoming residential projects.</li>
+                        <li>Enhanced city attractiveness from govt. infra projects.</li>
+                        <li>Strong USP with enhanced safety standards.</li>
+                        <li>Phased growth model (early years first).</li>
+                    </ul>
+                </div>
+                <div class="swot-item bg-yellow-100 border border-yellow-400">
+                    <h3 class="font-bold text-yellow-700 mb-2 text-lg">Threats</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Stringent regulatory approvals (EC, zoning).</li>
+                        <li>Intense competition for quality teaching talent.</li>
+                        <li>Economic fluctuations impacting fee affordability.</li>
+                        <li>Reputational risks in the education sector.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations" class="card">
+            <h2 class="text-2xl font-semibold mb-6 text-center"><span class="section-icon">🧭</span>Strategic Blueprint for Success</h2>
+            <div class="space-y-6">
+                <div class="p-4 rounded-lg border border-purple-300 bg-purple-50">
+                    <h3 class="text-lg font-semibold text-highlight mb-1 flex items-center"><span class="section-icon text-xl mr-2">🎯</span>1. Target Market & Value Proposition</h3>
+                    <p class="text-sm">Focus on aspirational middle-to-upper-income families. Position as a "Future-Ready Learning Hub" emphasizing NEP 2020, holistic development, tech integration, and robust safety.</p>
+                </div>
+                <div class="p-4 rounded-lg border border-pink-300 bg-pink-50">
+                    <h3 class="text-lg font-semibold text-secondary-accent mb-1 flex items-center"><span class="section-icon text-xl mr-2">📈</span>2. Phased Model & CBSE Affiliation</h3>
+                    <p class="text-sm">Launch with early childhood & primary grades (Nursery-Class 5). Pursue CBSE affiliation for national recognition and structured expansion.</p>
+                </div>
+                <div class="p-4 rounded-lg border border-teal-300 bg-teal-50">
+                    <h3 class="text-lg font-semibold text-tertiary-accent mb-1 flex items-center"><span class="section-icon text-xl mr-2">🏗️</span>3. Infrastructure & Operational Excellence</h3>
+                    <p class="text-sm">Strict adherence to zoning. Invest in utility backups (power, water), state-of-the-art safety, and efficient school transport.</p>
+                </div>
+                <div class="p-4 rounded-lg border border-yellow-300 bg-yellow-50">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-1 flex items-center"><span class="section-icon text-xl mr-2">👩‍🏫</span>4. Talent Management Strategy</h3>
+                    <p class="text-sm">Offer competitive compensation and robust professional development to attract and retain high-quality educators, focusing on NEP 2020 pedagogy.</p>
+                </div>
+                <div class="p-4 rounded-lg border border-gray-300 bg-gray-50">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-1 flex items-center"><span class="section-icon text-xl mr-2">📜</span>5. Regulatory Navigation & Engagement</h3>
+                    <p class="text-sm">Engage expert consultants for navigating permissions (State, EC, Affiliation). Foster strong community and local authority relations.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 py-8 border-t border-gray-300">
+            <p class="text-lg font-semibold text-highlight">Conclusion: A Strategic Imperative</p>
+            <p class="text-gray-700 mt-2">Establishing a new school in Govardhan, Nashik, is a strategically sound venture. With meticulous planning focusing on differentiation, quality, and resilience, the proposed institution can thrive in this dynamic and growing educational market.</p>
+            <p class="text-xs text-gray-500 mt-6">Infographic based on the Deep Research Report on School Feasibility at 20°03'19.5"N 73°54'23.4"E. Data extracted and synthesized for illustrative purposes.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const primaryBlue = '#6A0DAD';
+        const secondaryPink = '#FF007F';
+        const tertiaryTeal = '#008080';
+        const accentYellow = '#FFD700';
+        const darkText = '#2C2C2C';
+        const lightGray = '#F0F0F0';
+
+        function wrapLabels(label, maxWidth) {
+            if (typeof label !== 'string') return label;
+            if (label.length <= maxWidth) return label;
+
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: darkText
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: darkText },
+                    grid: { color: 'rgba(0,0,0,0.1)' }
+                },
+                x: {
+                    ticks: { color: darkText },
+                    grid: { color: 'rgba(0,0,0,0.05)' }
+                }
+            }
+        };
+
+        const popCtx = document.getElementById('populationGrowthChart').getContext('2d');
+        new Chart(popCtx, {
+            type: 'line',
+            data: {
+                labels: ['2011', '2015', '2020', '2025 (Proj.)'],
+                datasets: [{
+                    label: 'Nashik District Population (Millions)',
+                    data: [5.7, 6.0, 6.3, 6.62],
+                    borderColor: primaryBlue,
+                    backgroundColor: 'rgba(106, 13, 173, 0.1)',
+                    tension: 0.1,
+                    fill: true
+                }, {
+                    label: 'Nashik City Population (Millions)',
+                    data: [1.48, 1.8, 2.1, 2.35],
+                    borderColor: secondaryPink,
+                    backgroundColor: 'rgba(255, 0, 127, 0.1)',
+                    tension: 0.1,
+                    fill: true
+                }]
+            },
+            options: commonChartOptions
+        });
+        
+        const feeCtx = document.getElementById('feeStructureChart').getContext('2d');
+        const feeLabels = ['Mid-Range (e.g., KK Wagh)', 'Premium (e.g., Orchid Intl.)', 'New School Target (Potential Premium Value)'].map(label => wrapLabels(label, 16));
+        new Chart(feeCtx, {
+            type: 'bar',
+            data: {
+                labels: feeLabels,
+                datasets: [{
+                    label: 'Approx. Annual Fee (₹ Lakhs) - Primary/Mid',
+                    data: [0.55, 2.65, 1.5],
+                    backgroundColor: [tertiaryTeal, primaryBlue, secondaryPink],
+                }]
+            },
+            options: { ...commonChartOptions, indexAxis: 'y' }
+        });
+
+        const residentialCtx = document.getElementById('residentialUnitsChart').getContext('2d');
+        const residentialLabels = ['MHADA EWS', 'MHADA LIG', 'Shree Laxmi Apt', 'Srk Magnitude (Commercial)'].map(label => wrapLabels(label, 16));
+        new Chart(residentialCtx, {
+            type: 'bar',
+            data: {
+                labels: residentialLabels,
+                datasets: [{
+                    label: 'Number of Units (Adgaon)',
+                    data: [448, 77, 22, 39],
+                    backgroundColor: [primaryBlue, secondaryPink, tertiaryTeal, accentYellow],
+                }]
+            },
+            options: commonChartOptions
+        });
+
+    </script>
+</body>
+</html>
